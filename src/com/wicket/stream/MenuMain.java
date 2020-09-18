@@ -1,15 +1,13 @@
 package com.wicket.stream;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
+import static java.util.Comparator.comparingInt;
 
 /**
  * @param
@@ -20,7 +18,7 @@ import static java.util.Comparator.comparing;
  * @description TODO
  * @date 2020/9/7 16:33
  */
-public class Main {
+public class MenuMain {
 
     public static void process(Runnable r){
         r.run();
@@ -39,6 +37,60 @@ public class Main {
                 new Dish("prawns",false,300, Type.FISH),
                 new Dish("salmon",false,450, Type.FISH)
         );
+
+        Map<Type , List<Dish>> dishesByType = menu.stream().collect(Collectors.groupingBy(Dish::getType));
+        System.out.println(dishesByType);
+
+        Map<CaloricLevel,List<Dish>> dishesByCaloricLevel = menu.stream()
+                .collect(
+                        Collectors.groupingBy(dish -> {
+                            if(dish.getCalories() <= 400) return CaloricLevel.DIEF;
+                            else if(dish.getCalories() <= 700) return CaloricLevel.NORMAL;
+                            else return CaloricLevel.FAT;
+                        })
+                );
+        System.out.println(dishesByCaloricLevel);
+
+        Map<Type,Map<CaloricLevel,List<Dish>>> dishesByTypeCaloricLevel =
+                menu.stream().collect(
+                        Collectors.groupingBy(Dish::getType,
+                            Collectors.groupingBy(dish -> {
+                                if(dish.getCalories() <= 400) return CaloricLevel.DIEF;
+                                else if(dish.getCalories() <= 700) return CaloricLevel.NORMAL;
+                                else return CaloricLevel.FAT;
+                            })
+                        )
+                );
+        System.out.println(dishesByTypeCaloricLevel);
+
+        Map<Type,Long> typesCount = menu.stream().collect(
+                Collectors.groupingBy(Dish::getType,Collectors.counting())
+        );
+        System.out.println(typesCount);
+
+        Map<Type,Dish> mostCaloricByType =
+                menu.stream().collect(
+                        Collectors.groupingBy(Dish::getType,
+                                Collectors.collectingAndThen(
+                                        Collectors.maxBy(comparingInt(Dish::getCalories)),
+                                        Optional::get
+                                ))
+                );
+        System.out.println(mostCaloricByType);
+
+        //把菜单按照素食和非素食去分开
+        Map<Boolean,List<Dish>> partitionedMenu =
+                menu.stream().collect(Collectors.partitioningBy(Dish::isVegetarian));
+        System.out.println(partitionedMenu);
+        List<Dish> vegetarianDishes = partitionedMenu.get(true);
+        System.out.println(vegetarianDishes);
+        List<Dish> vegetarianDishesTrue = menu.stream().filter(Dish::isVegetarian).collect(Collectors.toList());
+        List<Dish> vegetarianDishesFalse = menu.stream().filter(dish -> dish.isVegetarian()==false).collect(Collectors.toList());
+        System.out.println(vegetarianDishesTrue);
+        System.out.println(vegetarianDishesFalse);
+
+
+
         System.out.println(menu.stream()
                 .reduce((acc,item) ->{
                     if(item.getCalories() < 400){
@@ -46,6 +98,7 @@ public class Main {
                     }
                     return acc;
                 }).toString());
+
 
 //        List<Integer> threeHighCaloricDishNames =  menu.stream()
 ////                .filter(dish -> dish.getCalories() > 300)
