@@ -9,6 +9,6 @@ package com.wicket.stream.apiIteration;
  * @description TODO
  * @date 2020/9/24 10:57
  */
-public interface E extends G{
+public interface E extends A{
 
 }
