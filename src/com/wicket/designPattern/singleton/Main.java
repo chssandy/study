@@ -1,6 +1,4 @@
-package com.wicket;
-
-import com.wicket.designPattern.singleton.Singleton;
+package com.wicket.designPattern.singleton;
 
 /**
  * @param

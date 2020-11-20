@@ -1,6 +1,6 @@
 package com.wicket.stream.factory;
 
-import com.wicket.observer.Product;
+import com.wicket.designPattern.observer.Product;
 
 /**
  * @param
