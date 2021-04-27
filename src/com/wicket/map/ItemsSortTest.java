@@ -24,6 +24,18 @@ public class ItemsSortTest {
         list.add(hisItem);
         list.add(herItem);
         Collections.sort(list,new NumberComparator());
+
+        int ind = Collections.binarySearch(list,myItem,new NumberComparator());
         System.out.println(list);
+        System.out.println("index of hisItem:"+ ind);
+
+        List<Integer> iList = new ArrayList<Integer>();
+        iList.add(88);
+        iList.add(888);
+        iList.add(8);
+        Collections.sort(iList);
+        int index = Collections.binarySearch(iList,88);
+        System.out.println(iList);
+        System.out.println("index of 88:" + index);
     }
 }
