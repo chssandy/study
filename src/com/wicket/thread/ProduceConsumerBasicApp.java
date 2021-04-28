@@ -18,6 +18,8 @@ public class ProduceConsumerBasicApp {
         for(int i = 0;i<4;i++){
             producer[i] = new Producer();
             producer[i].start();
+            System.out.println("producer thread name: " + producer[i].getName()+ " is creating...");
+
             consumer[i] = new Consumer();
             consumer[i].start();
             System.out.println("consumer thread name: " + consumer[i].getName()+ " is creating...");

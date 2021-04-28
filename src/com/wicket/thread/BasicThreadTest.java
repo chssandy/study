@@ -14,10 +14,18 @@ public class BasicThreadTest {
         System.out.println(Thread.currentThread().getName());  //打印当前运行线程名称
         Thread thread1 = new Thread(new MessageOne());
         Thread thread2 = new Thread(new MessageTwo());
-        thread1.setPriority(10);
-        thread2.setPriority(1);
-        thread1.start();
-        thread2.start();
+        try {
+            thread1.start();
+
+            thread2.start();
+            thread2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//        thread1.setPriority(1);
+//        thread2.setPriority(10);
+//        thread1.start();
+//        thread2.start();
 
 
     }
