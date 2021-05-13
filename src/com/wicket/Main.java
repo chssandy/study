@@ -1,6 +1,7 @@
 package com.wicket;
 
-import com.wicket.designPattern.singleton.Singleton;
+
+import java.lang.reflect.Field;
 
 /**
  * @param
@@ -13,8 +14,27 @@ import com.wicket.designPattern.singleton.Singleton;
  */
 public class Main {
     public static void main(String[] args) {
-        Singleton s1 = Singleton.getInstance();
-        Singleton s2 = Singleton.getInstance();
-        System.out.println(s1 == s2);
+        Integer a = 1;
+        Integer b = 3;
+        System.out.println("befor swap: a="+a+",b="+b);
+        swap(a,b);
+        System.out.println("after swap: a="+a+",b="+b);
+    }
+
+    private static void swap(Integer num1,Integer num2){
+
+        try {
+            Field field = Integer.class.getDeclaredField("value");
+            field.setAccessible(true);
+            int tmp = num1.intValue();
+
+            field.set(num1,num2);
+            field.set(num2,new Integer(tmp));
+
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
