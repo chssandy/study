@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter7;
+package com.wicket.jvm.thirdVersion.chapter7;
 
 /**
  * @author zzm
@@ -37,6 +37,6 @@ public class ClassLoaderTest {
         Object obj = myLoader.loadClass("org.fenixsoft.jvm.chapter7.ClassLoaderTest").newInstance();
 
         System.out.println(obj.getClass());
-        System.out.println(obj instanceof org.fenixsoft.jvm.chapter7.ClassLoaderTest);
+        System.out.println(obj instanceof ClassLoaderTest);
     }
 }

@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter9;
+package com.wicket.jvm.thirdVersion.chapter9;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;

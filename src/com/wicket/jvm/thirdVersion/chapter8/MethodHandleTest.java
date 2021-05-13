@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter8;
+package com.wicket.jvm.thirdVersion.chapter8;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;

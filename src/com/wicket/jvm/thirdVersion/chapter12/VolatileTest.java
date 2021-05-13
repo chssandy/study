@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter12;
+package com.wicket.jvm.thirdVersion.chapter12;
 
 /**
  * volatile变量自增运算测试

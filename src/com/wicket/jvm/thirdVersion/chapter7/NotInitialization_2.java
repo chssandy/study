@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter7;
+package com.wicket.jvm.thirdVersion.chapter7;
 
 /**
  * 被动使用类字段演示二：

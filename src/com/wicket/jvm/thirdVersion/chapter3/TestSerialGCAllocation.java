@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter3;
+package com.wicket.jvm.thirdVersion.chapter3;
 
 /**
  * VM参数：+XX:UseSerialGC

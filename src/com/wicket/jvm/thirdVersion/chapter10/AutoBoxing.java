@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter10;
+package com.wicket.jvm.thirdVersion.chapter10;
 
 /**
  * @author zzm

@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter4;
+package com.wicket.jvm.thirdVersion.chapter4;
 
 /**
  * staticObj、instanceObj、localObj存放在哪里？

@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter4;
+package com.wicket.jvm.thirdVersion.chapter4;
 
 import java.util.ArrayList;
 import java.util.List;

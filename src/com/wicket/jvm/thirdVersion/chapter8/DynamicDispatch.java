@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter8;
+package com.wicket.jvm.thirdVersion.chapter8;
 
 /**
  * 方法动态分派演示

@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter10;
+package com.wicket.jvm.thirdVersion.chapter10;
 
 import javax.annotation.processing.Messager;
 import javax.annotation.processing.ProcessingEnvironment;

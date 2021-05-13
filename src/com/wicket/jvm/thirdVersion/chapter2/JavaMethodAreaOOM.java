@@ -1,4 +1,5 @@
-package org.fenixsoft.jvm.chapter2;
+package com.wicket.jvm.thirdVersion.chapter2;
+
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;

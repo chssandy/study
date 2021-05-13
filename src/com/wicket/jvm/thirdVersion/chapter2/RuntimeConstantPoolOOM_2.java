@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter2;
+package com.wicket.jvm.thirdVersion.chapter2;
 
 public class RuntimeConstantPoolOOM_2 {
 

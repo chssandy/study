@@ -1,4 +1,6 @@
-package org.fenixsoft.jvm.chapter7;
+package com.wicket.jvm.thirdVersion.chapter7;
+
+import com.wicket.jvm.SubClass;
 
 /**
  * 非主动使用类字段演示

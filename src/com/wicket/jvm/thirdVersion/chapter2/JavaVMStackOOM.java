@@ -1,4 +1,4 @@
-package org.fenixsoft.jvm.chapter2;
+package com.wicket.jvm.thirdVersion.chapter2;
 
 /**
  * VM Args：-Xss2M （这时候不妨设大些，请在32位系统下运行）

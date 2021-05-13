@@ -1,5 +1,4 @@
-package org.fenixsoft.jvm.chapter8;
-
+package com.wicket.jvm.thirdVersion.chapter8;
 /**
  * 字段不参与多态
  * @author zzm
