@@ -1,6 +1,7 @@
 package com.wicket.jvm.thirdVersion.chapter2;
 
 /**
+ * 虚拟机栈和本地方法栈溢出
  * VM Args：-Xss128k
  *
  * @author zzm
