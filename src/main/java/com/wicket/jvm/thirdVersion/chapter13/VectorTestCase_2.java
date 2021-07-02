@@ -1,6 +1,7 @@
 package com.wicket.jvm.thirdVersion.chapter13;
 
 import java.util.Vector;
+import java.util.concurrent.locks.Lock;
 
 /**
  * @author zzm
@@ -20,7 +21,7 @@ public class VectorTestCase_2 {
                 public void run() {
                     synchronized (vector) {
                         for (int i = 0; i < vector.size(); i++) {
-                            vector.remove(i);
+                           vector.remove(i);
                         }
                     }
                 }
