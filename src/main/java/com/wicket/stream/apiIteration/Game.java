@@ -1,8 +1,5 @@
 package com.wicket.stream.apiIteration;
 
-import javafx.scene.shape.Rectangle;
-
-import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 

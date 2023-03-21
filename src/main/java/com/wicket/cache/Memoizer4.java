@@ -4,7 +4,6 @@ package com.wicket.cache;
 import net.jcip.annotations.GuardedBy;
 
 import java.math.BigInteger;
-import java.util.Map;
 import java.util.concurrent.*;
 
 /**

@@ -1,6 +1,5 @@
 package com.wicket.stream.completableFuture;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
 /**

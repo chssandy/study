@@ -1,7 +1,5 @@
 package com.wicket.thread.producerConsumer;
 
-import java.util.concurrent.BlockingQueue;
-
 /**
  * @param
  * @author CHS
