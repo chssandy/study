@@ -1,0 +1,2 @@
+com.wicket.spi.AppUserLoginServiceImpl
+com.wicket.spi.PCUserLoginServiceImpl
