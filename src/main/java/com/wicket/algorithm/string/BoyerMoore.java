@@ -127,4 +127,11 @@ public class BoyerMoore {
         }
         return m;
     }
+
+    public static void main(String[] args) {
+        BoyerMoore bm = new BoyerMoore();
+        String a = "阿达的算法的法师打发的发生的gas搭嘎说的跟";
+        String b = "发的发生的";
+        bm.bm(a.toCharArray(),a.length(),b.toCharArray(),b.length());
+    }
 }
