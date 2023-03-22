@@ -1,6 +1,5 @@
 package com.wicket.map;
 
-import javax.xml.soap.Node;
 import java.io.Serializable;
 
 /**

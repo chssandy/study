@@ -1,7 +1,5 @@
 package com.wicket.thread;
 
-import com.wicket.stream.apiIteration.C;
-
 /**
  * @param
  * @author CHS

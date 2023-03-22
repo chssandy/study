@@ -9,8 +9,6 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-import java.io.IOException;
-
 public class NettyServer {
     public static void main(String[] args) {
         //创建两个线程组bossGroup和workerGroup，含有的子线程NioEventLoop的个数默认为cpu核数的2倍

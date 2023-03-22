@@ -1,7 +1,6 @@
 package com.wicket.stream;
 
 import java.util.Spliterator;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 

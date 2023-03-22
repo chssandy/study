@@ -1,7 +1,5 @@
 package com.wicket.stream.debug;
 
-import com.wicket.stream.test.Point;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
