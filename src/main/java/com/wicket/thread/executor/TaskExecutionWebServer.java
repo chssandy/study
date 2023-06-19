@@ -1,6 +1,5 @@
 package com.wicket.thread.executor;
 
-import com.sun.deploy.net.HttpRequest;
 
 import java.io.IOException;
 import java.net.ServerSocket;

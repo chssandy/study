@@ -1,9 +1,6 @@
 package com.wicket.stream.apiIteration;
 
 
-import javafx.scene.shape.DrawMode;
-import sun.java2d.pipe.DrawImagePipe;
-
 /**
  * @param
  * @author CHS
